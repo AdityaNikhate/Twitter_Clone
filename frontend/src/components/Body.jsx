@@ -4,6 +4,7 @@ import Home from './Home'
 import Feed from './Feed'
 import Profile from './Profile'
 import Login from './Login'
+import AI from './AI'
 
 const Body = () => {
   const route = createBrowserRouter([
@@ -17,6 +18,9 @@ const Body = () => {
         },{
           path:'profile/:id',
           element:<Profile/>
+        },{
+          path: 'aibot',
+          element:<AI/>
         }
       ]
     },{

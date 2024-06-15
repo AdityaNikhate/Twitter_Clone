@@ -14,6 +14,8 @@ import {USER_API_END_POINT} from '../utils/constant'
 import {useDispatch, useSelector} from 'react-redux'
 import { getMyProfile, getOtherUsers, getUser } from '../store/userSlice';
 import { getAlltweets } from '../store/tweetSlice';
+import { AiOutlineRobot } from "react-icons/ai";
+
 
 const LeftSidebar = () => {
   const {user} = useSelector(store=>store.user)
@@ -71,6 +73,12 @@ const LeftSidebar = () => {
         <div className='flex items-center py-2 w-full mt-3 pl-10 gap-3 hover:bg-gray-300 rounded-md'>
           <IoAtCircleOutline className='text-xl'/>
           <h1 className='text-xl font-bold'>Profile</h1>
+        </div>
+      </Link>
+      <Link to={"/home/aibot"}>
+        <div className='flex items-center py-2 w-full mt-3 pl-10 gap-3 hover:bg-gray-300 rounded-md'>
+          <AiOutlineRobot className='text-xl'/>
+          <h1 className='text-xl font-bold'>AI BOT</h1>
         </div>
       </Link>
 
